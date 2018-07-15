@@ -120,7 +120,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(m_tabWidget, SIGNAL(currentChanged(int)), SLOT(tabChanged(int)));
 
     if (Settings::showStatusBar())
-        statusBar()->showMessage(i18n("KDE Remote Desktop Client started"));
+        statusBar()->showMessage(i18n("ARGOS 원격데스크톱이 실행되었습니다."));
 
     updateActionStatus(); // disable remote view actions
 
@@ -494,7 +494,7 @@ void MainWindow::switchFullscreen()
         // Entering full screen mode
         m_fullscreenWindow = new QWidget(this, Qt::Window);
         m_fullscreenWindow->setWindowTitle(i18nc("window title when in full screen mode (for example displayed in tasklist)",
-                                           "KDE Remote Desktop Client (Full Screen)"));
+                                           "ARGOS 원격 데스크톱 (전체화면)"));
 
         m_mainWindowGeometry = saveGeometry();
 
@@ -924,7 +924,7 @@ void MainWindow::quit(bool systemEvent)
 {
     const bool haveRemoteConnections = !m_remoteViewMap.isEmpty();
     if (systemEvent || !haveRemoteConnections || KMessageBox::warningContinueCancel(this,
-            i18n("Are you sure you want to quit the KDE Remote Desktop Client?"),
+            i18n("원격데스크톱을 종료하시겠습니까?"),
             i18n("Confirm Quit"),
             KStandardGuiItem::quit(), KStandardGuiItem::cancel(),
             QStringLiteral("DoNotAskBeforeExit")) == KMessageBox::Continue) {

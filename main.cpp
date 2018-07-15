@@ -73,10 +73,11 @@ int main(int argc, char **argv)
         }
     }
 
-    KAboutData aboutData(appName, i18n("KRDC"), QStringLiteral(KRDC_VERSION_STRING),
-                         i18n("KDE Remote Desktop Client"), KAboutLicense::LicenseKey::GPL);
+    KAboutData aboutData(appName, i18n("ARGOS 원격 데스크톱"), QStringLiteral(KRDC_VERSION_STRING),
+                         i18n("ARGOS 원격 데스크톱"), KAboutLicense::LicenseKey::GPL);
 
-    aboutData.setCopyrightStatement(i18n("(c) 2007-2016, Urs Wolfer\n"
+    aboutData.setCopyrightStatement(i18n("(c) 2016-2018, 백성은\n"
+                               "(c) 2007-2016, Urs Wolfer\n"
                                "(c) 2001-2003, Tim Jansen\n"
                                "(c) 2002-2003, Arend van Beelen jr.\n"
                                "(c) 2000-2002, Const Kaplinsky\n"
@@ -85,6 +86,7 @@ int main(int argc, char **argv)
                                "(c) 1999-2003, Matthew Chapman\n"
                                "(c) 2009, Collabora Ltd"));
 
+    aboutData.addAuthor(i18n("백성은"), i18n("Developer, Maintainer"), QStringLiteral("back@goback.world"));
     aboutData.addAuthor(i18n("Urs Wolfer"), i18n("Developer, Maintainer"), QStringLiteral("uwolfer@kde.org"));
     aboutData.addAuthor(i18n("Tony Murray"), i18n("Developer"), QStringLiteral("murraytony@gmail.com"));
     aboutData.addAuthor(i18n("Tim Jansen"), i18n("Former Developer"), QStringLiteral("tim@tjansen.de"));
